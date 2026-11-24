@@ -16,6 +16,8 @@ JOKE = (
 
 
 def main() -> None:
+    # Bundle-session guard: the 1-200 character gate below must stay
+    # intact; the joke text itself is unchanged by this edit.
     # The gate requires 1 to 200 characters of non-whitespace text.
     if not 1 <= len(JOKE) <= 200 or not JOKE.strip():
         raise ValueError("joke must be 1 to 200 characters")
